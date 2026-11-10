@@ -1,0 +1,62 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/format-dart.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(flutter analyze)",
+      "Bash(flutter analyze *)",
+      "Bash(flutter test)",
+      "Bash(flutter test *)",
+      "Bash(flutter pub get)",
+      "Bash(flutter pub add *)",
+      "Bash(flutter gen-l10n)",
+      "Bash(flutter build apk *)",
+      "Bash(flutter build appbundle *)",
+      "Bash(flutter build ios *)",
+      "Bash(flutter build web *)",
+      "Bash(dart format *)",
+      "Bash(dart run build_runner build)",
+      "Bash(dart run build_runner build *)",
+      "Bash(dart run build_runner watch)",
+      "Bash(dart fix --dry-run)",
+      "Bash(dart fix --apply)",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git log)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/*.jks)",
+      "Read(**/*.keystore)",
+      "Read(**/key.properties)",
+      "Read(**/google-services.json)",
+      "Read(**/GoogleService-Info.plist)",
+      "Read(**/*.p12)",
+      "Read(**/*.mobileprovision)",
+      "Edit(./.env)",
+      "Edit(./.env.*)",
+      "Edit(**/*.jks)",
+      "Edit(**/*.keystore)",
+      "Edit(**/key.properties)",
+      "Edit(**/google-services.json)",
+      "Edit(**/GoogleService-Info.plist)",
+      "Edit(**/*.p12)",
+      "Edit(**/*.mobileprovision)"
+    ]
+  }
+}

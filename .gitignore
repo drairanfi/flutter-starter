@@ -58,3 +58,8 @@ lib/core/l10n/generated/
 config/*.local.json
 *.jks
 key.properties
+
+# AI harness: personal settings and working plans stay local
+.claude/settings.local.json
+.claude/plans/*
+!.claude/plans/.gitkeep

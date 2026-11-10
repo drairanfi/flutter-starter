@@ -34,6 +34,11 @@ android {
         versionName = flutter.versionName
     }
 
+    // AGP disables resValue by default; flavors use it for `app_name`.
+    buildFeatures {
+        resValues = true
+    }
+
     flavorDimensions += "env"
     productFlavors {
         create("dev") {

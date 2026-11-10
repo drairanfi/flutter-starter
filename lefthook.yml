@@ -1,0 +1,15 @@
+# Install once with: lefthook install   (https://lefthook.dev)
+pre-commit:
+  parallel: false
+  commands:
+    format:
+      glob: "*.dart"
+      run: dart format --output=none --set-exit-if-changed {staged_files}
+    analyze:
+      glob: "*.dart"
+      run: flutter analyze
+
+commit-msg:
+  commands:
+    conventional-commit:
+      run: sh scripts/check_commit_msg.sh {1}

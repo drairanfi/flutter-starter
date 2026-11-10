@@ -1,0 +1,39 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flutter Template",
+  "loginTitle": "Welcome back",
+  "loginSubtitle": "Sign in to continue",
+  "loginHint": "Demo credentials: any valid email and the password \"password123\".",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "signIn": "Sign in",
+  "signOut": "Sign out",
+  "homeTitle": "Home",
+  "homeWelcome": "Hello, {name}!",
+  "@homeWelcome": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "homeEnvironment": "Environment: {environment}",
+  "@homeEnvironment": {
+    "placeholders": {
+      "environment": {"type": "String"}
+    }
+  },
+  "settingsTitle": "Settings",
+  "themeModeLabel": "Appearance",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "validationEmailRequired": "Email is required",
+  "validationEmailInvalid": "Enter a valid email address",
+  "validationPasswordRequired": "Password is required",
+  "errorGeneric": "Something went wrong. Please try again.",
+  "errorNetwork": "No connection. Check your internet and try again.",
+  "errorTimeout": "The request timed out. Please try again.",
+  "errorUnauthorized": "Your session has expired. Please sign in again.",
+  "errorNotFound": "We could not find what you were looking for.",
+  "errorServer": "The server had a problem. Please try again later.",
+  "errorInvalidCredentials": "Incorrect email or password."
+}

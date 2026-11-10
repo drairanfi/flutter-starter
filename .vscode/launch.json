@@ -6,22 +6,34 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main_dev.dart",
-      "args": ["--dart-define-from-file=config/dev.json"]
+      "args": [
+        "--flavor",
+        "dev",
+        "--dart-define-from-file=config/dev.json"
+      ]
     },
     {
       "name": "staging",
       "request": "launch",
       "type": "dart",
       "program": "lib/main_staging.dart",
-      "args": ["--dart-define-from-file=config/staging.json"]
+      "args": [
+        "--flavor",
+        "staging",
+        "--dart-define-from-file=config/staging.json"
+      ]
     },
     {
       "name": "prod",
       "request": "launch",
       "type": "dart",
-      "flutterMode": "release",
       "program": "lib/main_prod.dart",
-      "args": ["--dart-define-from-file=config/prod.json"]
+      "args": [
+        "--flavor",
+        "prod",
+        "--dart-define-from-file=config/prod.json"
+      ],
+      "flutterMode": "release"
     }
   ]
 }

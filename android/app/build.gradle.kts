@@ -4,6 +4,11 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// >>> BASE APPLICATION ID: change this single constant when renaming the app. <<<
+// Flavors append a suffix (".dev", ".staging"; none for prod). The `namespace`
+// below is the Kotlin/Java package and is independent of the application id.
+val baseApplicationId = "com.example.flutter_template"
+
 android {
     namespace = "com.example.flutter_template"
     compileSdk = flutter.compileSdkVersion
@@ -16,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.flutter_template"
+        applicationId = baseApplicationId
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
@@ -27,6 +32,24 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+    }
+
+    flavorDimensions += "env"
+    productFlavors {
+        create("dev") {
+            dimension = "env"
+            applicationIdSuffix = ".dev"
+            resValue("string", "app_name", "Template Dev")
+        }
+        create("staging") {
+            dimension = "env"
+            applicationIdSuffix = ".staging"
+            resValue("string", "app_name", "Template Staging")
+        }
+        create("prod") {
+            dimension = "env"
+            resValue("string", "app_name", "Template")
+        }
     }
 
     buildTypes {

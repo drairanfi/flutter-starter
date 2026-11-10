@@ -1,0 +1,5 @@
+// Flavor: prod
+#include "Base.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = $(APP_BUNDLE_ID_BASE)
+APP_DISPLAY_NAME = Template

@@ -1,0 +1,7 @@
+// Shared defaults for every build configuration (included by Debug/Release).
+// Flavor files (dev/staging/prod.xcconfig) override these values.
+
+// >>> BASE BUNDLE ID: change this single constant when renaming the app. <<<
+APP_BUNDLE_ID_BASE = com.example.flutterTemplate
+PRODUCT_BUNDLE_IDENTIFIER = $(APP_BUNDLE_ID_BASE)
+APP_DISPLAY_NAME = Flutter Template
